@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"
+    <title>Age calculator</title>
+<script>
+    function calculateAge(event) {
+        event.preventDefault(); 
+         var dob = document.getElementById("dob").value;
+         var cuy = document.getElementById("cuy").value
+         var age = cuy - dob;
+         //var age = new Date().getFullyear() - dob;
+         alert("your age is " + age);
+         document.getElementById("result").innerHTML = "Your age is: " + age + "years old";
+    } 
+        </script>
+</head>
+<body>
+<h4>Calculate age</h4>
+<form onsubmit="calculateAge(event)">
+   <label for="name"> Date of Birth (YEAR):</label>
+   <input type="number" id="dob" name="dob" min="1950" max="2022" required>
+   <label for="name"> current year:</label>
+   <input type="number" id="cuy" name="cuy" value="2024" required>
+
+<input type="submit" value="calculate Age" >
+
+   <div id="result"></div>
+
+</form>
+
+
+   </body>
+</html>
